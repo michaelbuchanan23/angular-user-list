@@ -1,0 +1,10 @@
+<div>
+GET
+<!-- *ngif="user" means don't render the table until there is something there to render (i.e., the server has responded with a user instance) -->
+  <table *ngIf="user" class = "table table-sm">
+      <tr><th>Name</th><td>{{ user.Firstname }} {{ user.Lastname }}</td></tr>
+      <tr><th>Email</th><td>{{ user.Email }}</td></tr>
+      <tr><th>Username</th><td>{{ user.Username }}</td></tr>
+      <tr><th>Password</th><td>{{ user.Password }}</td></tr>
+  </table>
+</div>
