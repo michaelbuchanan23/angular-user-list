@@ -20,5 +20,16 @@ export class UserService {
 		return this.http.get(this.url+"Get/"+id) as Observable<JsonResponse>;
 	}
 
+	create(user: User): Observable<JsonResponse> {
+		return this.http.post(this.url+"Create",user) as Observable<JsonResponse>;
+	}
+
+	change(user: User): Observable<JsonResponse> {
+		return this.http.post(this.url+"Change",user) as Observable<JsonResponse>;
+	}
+
+	remove(user: User): Observable<JsonResponse> {
+		return this.http.post(this.url+"Remove",user) as Observable<JsonResponse>;
+	}
 	constructor(private http: HttpClient) { }
 }

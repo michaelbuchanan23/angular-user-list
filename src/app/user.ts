@@ -11,5 +11,11 @@ export class User {
 	IsAdmin: boolean;
 	Active: boolean;
 
-	constructor() {}
+//making sure all the non-nullable fields are initialized to something
+	constructor() {
+		this.Id = 0;
+		this.IsReviewer = false;
+		this.IsAdmin = false;
+		this.Active = true;
+	}
 }

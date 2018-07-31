@@ -12,10 +12,17 @@ export class UserDetailComponent implements OnInit {
 
 	user: User;
 
+	remove(): void {
+		this.usersvc.remove(this.user)
+			.subscribe(resp => {
+				console.log("Remove:", resp);
+			});
+	}
+
   constructor(private usersvc: UserService) { }
 
   	ngOnInit() {
-		this.usersvc.get(1)
+		this.usersvc.get(5)
 			.subscribe(resp => {
 				this.user = resp.Data;
 				console.log(resp);	
